@@ -24,7 +24,7 @@ class ExpenseReport(object):
 
 if __name__ == "__main__":
     e = ExpenseReport("inputs/day1_test.txt")
-    print("Part 1a test: {}".format(e.find_answer(2)))
+    print("Day 1 test: {}".format(e.find_answer(2)))
     e = ExpenseReport("inputs/day1.txt")
-    print("Part 1a: {}".format(e.find_answer(2)))
-    print("Part 1b: {}".format(e.find_answer(3)))
+    print("Day 1a: {}".format(e.find_answer(2)))
+    print("Day 1b: {}".format(e.find_answer(3)))
