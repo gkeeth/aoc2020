@@ -26,8 +26,10 @@ class BagRules(object):
             return True
         else:
             # search inner bags
-            results = [self.can_bag_contain(o, inner_color) for o in self.rules[outer_color].keys()]
-            return functools.reduce(lambda a, b: a or b, results)
+            for color in self.rules[outer_color].keys():
+                if self.can_bag_contain(color, inner_color):
+                    return True
+            return False
 
     def count_bags_containing(self, inner_color="shiny gold"):
         """ count the number of bags that contain at least one inner_color bag """
